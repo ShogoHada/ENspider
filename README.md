@@ -1,32 +1,24 @@
-# ENspider
+# README
 
-## サービス概要
-英語を学習したいと思ってるけど、一人で勉強していてもつまらず飽きてしまう。そんな人のためにゲーム感覚で、楽しく英語を学習してもらう英単語学習型対戦ゲーム。
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## 登場人物
+Things you may want to cover:
 
-### エンドユーザー
-英単語を学習するゲームプレイヤー
+* Ruby version
 
-### 管理者
-ゲームシステムを改善する人
+* System dependencies
 
-## ユーザーが抱える課題
-英語を勉強したいがモチベーションが上がらない。
+* Configuration
 
-勉強はしても実際に使う機会が少なく、いまいち知識が積み重なったという実感がない。
+* Database creation
 
-一人で英語を勉強してても孤独。もっと英語学習の進捗を張り合う相手が欲しい。
+* Database initialization
 
-## 解決方法
-対戦ゲーム形式で英単語力を競うことで、自分の覚えた英単語を使用しつつ、他の人が使う英単語から新しい単語を学ぶことできるため、
-楽しくアウトプットとインプットを繰り返しながら英単語を学べる。
+* How to run the test suite
 
-## プロダクト
-API連携を活用したWebアプリケーション
+* Services (job queues, cache servers, search engines, etc.)
 
-## マーケット
-子供から大人まで英単語を学習したい人
+* Deployment instructions
 
-## 画面遍移図
-https://www.figma.com/file/Lwyf1Ri7GNZB3tv8ao107h/ENspider?node-id=0%3A1
+* ...

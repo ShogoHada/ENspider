@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :games
-  root to: 'games#index'
+  resources :items,param: :word
+
+  root 'games#index'
+  # get 'index' => 'items#index'
+  get 'search' => 'items#search'
 end
