@@ -1,14 +1,23 @@
 class ItemsController < ApplicationController
+  before_action :set_q, only: [:index, :wordSearch]
+
   def index
   end
 
   def show
-    @items = Item.order("RANDOM()").where(word: params[:word]).limit(1)
+    @items = Item.where(word: params[:word]).order("RANDOM()").limit(1)
     render json: {
       items: @items
     }
   end
-  def search
-    @items = Item.search(params[:search])
+
+  def wordSearch
+    @results = @q.result
+  end
+
+  private
+
+  def set_q
+    @q = Item.ransack(params[:q])
   end
 end

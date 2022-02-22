@@ -1,5 +1,8 @@
-<p>検索</p>
-<%= form_tag(search_path,:method => 'get') do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag 'Search', :name => nil %>
+<%= link_to 'ゲーム', root_path %>
+<h1>ワード検索</h1>
+<%= search_form_for @q, url: wordSearch_items_path do |f| %>
+  <%= f.label :word_eq, 'ワード' %>
+  <%= f.search_field :word_eq,required: true  %>
+  <br>
+  <%= f.submit '検索' %>
 <% end %>

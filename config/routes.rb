@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :items,param: :word
+  # resources :items, :only => [:index,:show],param: :word
 
   root 'games#index'
-  # get 'index' => 'items#index'
-  get 'search' => 'items#search'
+  # get "search" => "searches#search"
+
+  resources :items, :only => [:index,:show],param: :word do
+    collection do
+      get 'wordSearch'
+    end
+  end
 end

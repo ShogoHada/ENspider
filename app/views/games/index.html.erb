@@ -9,11 +9,11 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width="960" height="600" style="width: 960px; height: 600px;"></canvas>
-      <div id="unity-loading-bar" style="display: block;">
+      <canvas id="unity-canvas" width=960 height=540></canvas>
+      <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full" style="width: 0%;"></div>
+          <div id="unity-progress-bar-full"></div>
         </div>
       </div>
       <div id="unity-mobile-warning">
@@ -22,16 +22,15 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">ENspider</div>
       </div>
     </div>
     <script>
       var buildUrl = "../assets/Build";
-      var loaderUrl = buildUrl + "/ENspider_test2.loader.js";
+      var loaderUrl = buildUrl + "/ENspider_test1.loader.js";
       var config = {
-        dataUrl: buildUrl + "/ENspider_test2.data.unityweb",
-        frameworkUrl: buildUrl + "/ENspider_test2.framework.js.unityweb",
-        codeUrl: buildUrl + "/ENspider_test2.wasm.unityweb",
+        dataUrl: buildUrl + "/ENspider_test1.data.unityweb",
+        frameworkUrl: buildUrl + "/ENspider_test1.framework.js.unityweb",
+        codeUrl: buildUrl + "/ENspider_test1.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "ENspider",
@@ -63,7 +62,7 @@
         }, 5000);
       } else {
         canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.height = "540";
       }
       loadingBar.style.display = "block";
 
@@ -82,6 +81,20 @@
         });
       };
       document.body.appendChild(script);
-    </script><script src="../assets/Build/ENspider_test2.loader.js"></script>
+    </script>
+    <script>
+      var recaptureInputAndFocus = function() {
+      var canvas = document.getElementById("#canvas");
+      if(canvas) {
+        canvas.setAttribute("tabindex", "1");
+        canvas.focus(); 
+      } else
+        setTimeout(recaptureInputAndFocus, 100);
+      }
+ 
+      recaptureInputAndFocus();
+      </script>
   </body>
 </html>
+
+<%= link_to '単語検索', items_path %>
