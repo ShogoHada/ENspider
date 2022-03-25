@@ -1,0 +1,8 @@
+<h2>ワード検索</h2>
+<div class="form">
+<%= form_tag(wordSearch_items_path, method: :get) do %>
+  <%= select_tag :search, options_for_select([["前方一致","forward_match"],  ["完全一致","perfect_match"]],params[:search]) %>
+  <%= text_field_tag :word,params[:word]  %>
+  <%= submit_tag "検索" %>
+<% end %>
+</div>

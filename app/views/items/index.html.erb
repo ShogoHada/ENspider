@@ -1,8 +1,25 @@
-<%= link_to 'ゲーム', root_path %>
-<h1>ワード検索</h1>
-<%= search_form_for @q, url: wordSearch_items_path do |f| %>
-  <%= f.label :word_eq, 'ワード' %>
-  <%= f.search_field :word_eq,required: true  %>
-  <br>
-  <%= f.submit '検索' %>
+<%= render "layouts/search_form" %>
+
+
+<% if @item.present? %>
+  <% @item.each do |item| %>
+    <table>
+    <tr>
+        <td>
+          <h2><%= item.word %></h2>
+        </td>
+        <% if current_user.present? %>
+          <% if current_user.favorited_by?(item.id) %>
+            <td><%= button_to '登録解除', item_favorites_path(item), method: :delete %></td>
+          <% else %>
+          <td><%= button_to '単語登録', item_favorites_path(item) %></td>
+          <% end %>
+        <% end %>
+        </tr>
+        </table>
+        <p><%= simple_format(item.mean.split("/").join("\n")) %></p>
+        
+    <% end %>    
+  <%= paginate @item %>
 <% end %>
+

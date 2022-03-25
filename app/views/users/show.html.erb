@@ -1,0 +1,30 @@
+<h2>ユーザーページ</h2>
+
+<h3>名前 : <%= @user.name %></h3>
+<%= render "layouts/search_form" %>
+<h3>登録した単語</h3>
+
+<div class="content">
+  <table>
+    <thead>
+      <tr>
+        <th>word</th>
+        <th>mean</th>
+      </tr>
+    </thead>
+    <% @item.reverse.each do |item| %>
+      <tbody>
+        <tr>
+          <td>
+            <p><%= link_to item.word,{:controller=>"items",:action=>"wordSearch",word: item.word, search:"perfect_match"}%></p>
+          </td>
+          <td>
+            <%= item.mean %>
+          </td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+</div>
+<%= paginate @item %>
+

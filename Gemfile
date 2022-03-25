@@ -29,7 +29,16 @@ gem "jbuilder"
 
 gem 'rack-cors'
 
+gem 'kaminari'
 gem 'ransack'
+
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
+
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
