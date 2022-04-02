@@ -16,7 +16,7 @@
       <tbody>
         <tr>
           <td>
-            <p><%= link_to item.word,{:controller=>"items",:action=>"wordSearch",word: item.word, search:"perfect_match"}%></p>
+            <p><%= link_to item.word,{:controller=>"items",:action=>"wordSearch",word: item.word, data: {"turbolinks" => false}, search:"perfect_match"}%></p>
           </td>
           <td>
             <%= item.mean %>
