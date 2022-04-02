@@ -1,13 +1,11 @@
 <h3>
-  <%= link_to_unless_current 'トップ', root_path %>
-  <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
-    <!-- ユーザーがログインしていた時の処理 -->
-    <%= link_to_unless_current "マイページ", user_path(current_user) %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
+  <%= link_to_unless_current 'トップ', root_path, data: {"turbolinks" => false} %>
+  <% if user_signed_in? %> 
+    <%= link_to_unless_current "マイページ", user_path(current_user), data: {"turbolinks" => false} %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {"turbolinks" => false} %>
   <% else %>
-    <!-- ユーザーがログインしていなかった時の処理 -->
-    <%= link_to_unless_current "ログイン", new_user_session_path, class: 'post' %> <!-- ログイン画面に移行する -->
-    <%= link_to_unless_current "新規登録", new_user_registration_path, class: 'post' %> <!-- 新規登録画面に移行する -->
+    <%= link_to_unless_current "ログイン", new_user_session_path, class: 'post', data: {"turbolinks" => false} %>
+    <%= link_to_unless_current "新規登録", new_user_registration_path, class: 'post', data: {"turbolinks" => false} %>
   <% end %>
 </h3>
 
