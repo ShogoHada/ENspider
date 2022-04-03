@@ -3,20 +3,14 @@
 
 <% if @item.present? %>
   <% @item.each do |item| %>
-    <table>
-      <td>
         <h2><%= item.word %></h2>
-      </td>
       <% if current_user.present? %>
         <% if current_user.favorited_by?(item.id) %>
-          <td><%= button_to '登録解除', item_favorites_path(item), method: :delete %></td>
+            <%= button_to '登録解除', item_favorites_path(item), method: :delete %>
         <% else %>
-          <td>
             <%= button_to '単語登録', item_favorites_path(item) %>
-          </td>
         <% end %>
       <% end %>
-    </table>
     <p><%= simple_format(item.mean.split("/").join("\n")) %></p>
   <% end %>    
   <%= paginate @item %>
