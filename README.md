@@ -1,24 +1,31 @@
-# README
+サービス概要
+英語を学習したいと思ってるけど、英語に対して苦手意識を持っていたり、一人で勉強していてもつまらず飽きてしまう。そんな人のためにゲーム感覚で、楽しく英語を学習してもらう英単語学習型ゲーム。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+登場人物
+エンドユーザー
+英単語を学習するゲームプレイヤー
 
-Things you may want to cover:
+管理者
+ゲームシステムを改善する人
 
-* Ruby version
+ユーザーが抱える課題
+英語を勉強したいがモチベーションが上がらない。
 
-* System dependencies
+勉強はしても実際に使う機会が少なく、いまいち知識が積み重なったという実感がない。
 
-* Configuration
+偶発的学習がない。単語を覚えようと集中して覚える意図的学習だけでは長続きが難しい。
 
-* Database creation
+解決方法
+ゲーム形式で英単語力を競うことで、より高いスコアを目指すためにもっと新しい単語を覚えたいという意識を作る。
+ゲーム形式なので学習しようという動機づけなしに、気がついたら英単語力を身に着けている。
+英単語に触れる機会を増やし、英語への苦手意識をなくす。
+意図していなかった単語に触れる機会が増え、楽しくアウトプットとインプットを繰り返しながら英単語を学べる。
 
-* Database initialization
+プロダクト
+API連携を活用したWebアプリケーション
 
-* How to run the test suite
+マーケット
+子供から大人まで英単語を学習したい人
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+画面遍移図
+https://www.figma.com/file/Lwyf1Ri7GNZB3tv8ao107h/ENspider?node-id=0%3A1
