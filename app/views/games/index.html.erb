@@ -24,7 +24,7 @@
       <div class="area line-height-1">
         <% if current_user.present? %>
           <% current_user.used_words.reverse.each do |item| %>
-            <p><%= link_to item.word,{:controller=>"items",:action=>"wordSearch",word: item.word, search:"perfect_match", data: {"turbolinks" => false}}%></p>
+            <p><%= link_to item.word,{:controller=>"items",:action=>"wordSearch",word: item.word, search:"perfect_match"}, data: { no_turbolink: true }%></p>
           <% end %>
         <% end %>
       </div>
