@@ -113,6 +113,7 @@ GEM
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
+    high_voltage (3.1.2)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.0.3)
@@ -326,6 +327,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  high_voltage
   importmap-rails
   jbuilder
   jquery-rails
