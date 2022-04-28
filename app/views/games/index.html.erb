@@ -6,18 +6,6 @@
       <%= render "layouts/search_form" %>
     </h4>
   </div>
-  <div class="col-md-2">
-    
-    <% if  current_user.present? %>
-      <h5>メモ</h5>
-    <% else %>
-     <p>
-        ログインして単語を調べて登録し、<br>
-        メモを利用しよう
-      </p>
-    <% end %>
-
-  </div>
 </div>
 
 
@@ -25,17 +13,21 @@
   <div class="row">
     <!-- 左コンテンツ -->
     <div class="col-md-11">
-      <iframe id="webgl-frame" class="iframe-inner" src="https://object-storage.tyo1.conoha.io/v1/nc_df3bdbc45bc04950b558834f5728517a/unityroom_production/game/26428/webgl/play.html" width="960px" height="540px frameborder=" scrolling="auto"></iframe>
+      <iframe id="webgl-frame" class="iframe-inner" src="https://object-storage.tyo1.conoha.io/v1/nc_df3bdbc45bc04950b558834f5728517a/unityroom_production/game/26428/webgl/play.html"  frameborder=" scrolling="auto"></iframe>
     </div>
     <!-- 右サイドメニュー -->
     <div class="col-md-1">
-      <div class="area line-height-1">
         <% if current_user.present? %>
-            <% current_user.used_words.reverse.each do |item| %>
-              <p><%= link_to item.word,{:controller=>"items",:action=>"wordSearch",word: item.word, search:"perfect_match"}%></p>
-            <% end %>
+          <h5>メモ</h5>
+          <% current_user.used_words.reverse.each do |item| %>
+            <p><%= link_to item.word,{:controller=>"items",:action=>"wordSearch",word: item.word, search:"perfect_match"}%></p>
+          <% end %>
+        <% else %>
+          <p>
+            ログインして単語を調べて登録し、<br>
+             メモを利用しよう
+          </p>
         <% end %>
-      </div>
     </div>
  </div>
 </div>

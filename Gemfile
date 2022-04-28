@@ -36,6 +36,7 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
+gem 'dotenv-rails'
 
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'

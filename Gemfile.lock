@@ -103,6 +103,10 @@ GEM
       responders
       warden (~> 1.2.3)
     digest (3.1.0)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.8.1)
     faraday (2.2.0)
@@ -327,6 +331,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  dotenv-rails
   high_voltage
   importmap-rails
   jbuilder

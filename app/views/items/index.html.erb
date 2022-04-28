@@ -1,8 +1,6 @@
 <%= render "layouts/search_form" %>
 <%= stylesheet_link_tag "items", :media => "all" %>
 
-
-
 <% if @item.present? %>
   <% @item.each do |item| %>
         <h2><%= item.word %></h2>
