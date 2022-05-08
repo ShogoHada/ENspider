@@ -12,11 +12,11 @@
 <div class="container">
   <div class="row">
     <!-- 左コンテンツ -->
-    <div class="col-md-11">
+    <div class="col-md-9">
       <iframe id="webgl-frame" class="iframe-inner" src="https://object-storage.tyo1.conoha.io/v1/nc_df3bdbc45bc04950b558834f5728517a/unityroom_production/game/26428/webgl/play.html"  frameborder=" scrolling="auto"></iframe>
     </div>
     <!-- 右サイドメニュー -->
-    <div class="col-md-1">
+    <div class="col-md-3">
         <% if current_user.present? %>
           <h5>メモ</h5>
           <% current_user.used_words.reverse.each do |item| %>
@@ -24,7 +24,7 @@
           <% end %>
         <% else %>
           <p>
-            ログインして単語を調べて登録し、<br>
+            ログインして単語を調べて登録し、
              メモを利用しよう
           </p>
         <% end %>
