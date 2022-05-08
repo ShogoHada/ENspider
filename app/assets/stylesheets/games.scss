@@ -4,10 +4,7 @@ p {
   padding: 0px 20px 0px 0px;
 }
 
-iframe {
-  width: 960px;
-  height: 540px;
-}
+
 
 .container {
   width: 100%;
@@ -16,7 +13,7 @@ iframe {
   margin-left: 5%;
 }
 
-@media (max-width: 699px) {
+@media (max-width: 899px) {
   iframe {
     width: 640px;
     height: 360px;
@@ -34,5 +31,10 @@ iframe {
   .container {
     max-width: 1340px;
   }
-}
 
+  iframe {
+    width: 960px;
+    height: 540px;
+  }
+  
+}
