@@ -42,6 +42,10 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 gem 'high_voltage'
+
+gem 'rails-i18n'
+gem 'devise-i18n'
+gem 'devise-bootstrap-views'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
