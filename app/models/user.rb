@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :used_words, through: :favorites, source: :item
+  validates :name, presence: true
+
 
   def favorited_by?(item_id)
     favorites.where(item_id: item_id).exists?
